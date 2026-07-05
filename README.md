@@ -170,3 +170,47 @@ You will then be able to navigate to:
 ```text
 C:\Users\<YourUser>\AppData\Local\nvm
 ```
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Font setup guide
+
+## How to change the main font
+
+1. Open the main typography variables file:
+   - [src/scss/utils/_config.scss](src/scss/utils/_config.scss)
+
+2. Change the variable value for the main font:
+   ```scss
+   --typo-1: 'Raleway', Arial, Tahoma, sans-serif;
+   ```
+   Replace `Raleway` with the font you want to use, for example:
+   ```scss
+   --typo-1: 'Poppins', Arial, Tahoma, sans-serif;
+   ```
+
+3. Make sure the font files are available locally in:
+   - [src/fonts](src/fonts)
+
+4. Add matching `@font-face` rules in:
+   - [src/scss/base/_typography.scss](src/scss/base/_typography.scss)
+
+5. Rebuild the project so the new styles are generated.
+
+## Notes
+
+- The mixin used in components only sets `font-family`, `font-size`, `font-weight`, and `font-style`.
+- It does not load fonts by itself.
+- If the font name in the CSS does not match the `@font-face` declaration, the browser will fall back to another font.
+
+## Example
+
+If you want to use Poppins instead of Raleway:
+
+```scss
+/* in src/scss/utils/_config.scss */
+--typo-1: 'Poppins', Arial, Tahoma, sans-serif;
+```
+
+And in [src/scss/base/_typography.scss](src/scss/base/_typography.scss), define the Poppins `@font-face` entries for the required weights.
+
