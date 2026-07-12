@@ -220,8 +220,9 @@ To make a new style file work, you need to add it to `src/scss/core.scss` .
 
 
 Create your new partial file, e.g. `src/scss/components/_exemple.scss`
-Import it in `src/scss/core.scss`:
+
 
 ```scss
+in /*  `src/scss/core.scss` */
 scss@import 'components/exemple';
 ```
