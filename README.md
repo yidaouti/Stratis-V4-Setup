@@ -223,6 +223,6 @@ Create your new partial file, e.g. `src/scss/components/_exemple.scss`
 
 
 ```scss
-in /*  `src/scss/core.scss` */
+/* in  `src/scss/core.scss` */
 scss@import 'components/exemple';
 ```
