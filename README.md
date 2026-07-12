@@ -214,3 +214,12 @@ If you want to use Poppins instead of Raleway:
 
 And in [src/scss/base/_typography.scss](src/scss/base/_typography.scss), define the Poppins `@font-face` entries for the required weights.
 
+##How to add a new SCSS file to the project
+
+To make a new style file work, you need to add it to src/scss/core.scss.
+
+
+Create your new partial file, e.g. src/scss/components/_exemple.scss
+Import it in src/scss/core.scss:
+
+scss@import 'components/exemple';
