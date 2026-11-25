@@ -123,6 +123,12 @@ npm install
 npm run inline-watch
 ```
 
+##  build the Newsletter Project (to see the images)
+
+```bash
+npm run build-watch
+```
+
 This starts the Newsletter project in watch mode.
 
 ---
